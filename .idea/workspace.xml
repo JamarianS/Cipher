@@ -5,7 +5,6 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="586ab87b-ff27-4290-a27d-af7883cb778d" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/ObjectOrientedProgramming/CaesarCipher.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ObjectOrientedProgramming/CaesarCipher.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/ObjectOrientedProgramming/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ObjectOrientedProgramming/Main.java" afterDir="false" />
     </list>

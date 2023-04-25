@@ -1,18 +1,17 @@
 package ObjectOrientedProgramming;
 
-import java.util.Scanner;
 
 public class CaesarCipher {
 
     private int shift;
 
     //no-arg constructor
-    public CaesarCipher(){
+    public CaesarCipher() {
         this(3); //default shift value
     }
 
     //constructor taking a parameter
-    public CaesarCipher(int shift){
+    public CaesarCipher(int shift) {
         this.shift = shift;
     }
 
@@ -37,23 +36,34 @@ public class CaesarCipher {
 
 
     //can you complete decrypt() method
-    public String decrypt(String message){
-        String decrypted = "";
-        for (int i = 0; i < message.length(); i++) {
+    public String decrypt(String message) {
+        String decrypted = " ";
+        for (int i = 0; i < message.length(); ++i) {
             char c = message.charAt(i);
-            if (c >= 'A' && c <= 'Z') {
-                char shifted = (char) ('A' + (c - 'A' - shift) % 26);
-                decrypted += shifted;
-            } else if (c >= 'a' && c <= 'z') {
-                char shifted = (char) ('a' + (c - 'a' - shift) % 26);
-                decrypted += shifted;
+            if (c >= 'a' && c <= 'z') {
+                c = (char) (c - shift);
+
+                if (c < 'a') {
+                    c = (char) (c + 'z' - 'a' + 1);
+                }
+
+                decrypted += c;
+            } else if (c >= 'A' && c <= 'Z') {
+                c = (char) (c - shift);
+
+                if (c < 'A') {
+                    c = (char) (c + 'Z' - 'A' + 1);
+                }
+
+                decrypted += c;
             } else {
                 decrypted += c;
             }
         }
         return decrypted;
     }
-    }
+}
+
 
 
 
